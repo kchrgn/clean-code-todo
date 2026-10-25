@@ -5,8 +5,9 @@ import globals from 'globals';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default defineConfig([
-  js.configs.recommended,
   {
+    files: ['**/*.js'],
+    ...js.configs.recommended,
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
